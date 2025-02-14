@@ -15,7 +15,7 @@ public class Withdrawal extends Transactions {
     @Override
     public void execute(Account account) {
         if (account.getBalance() < getAmount()) {
-            IOHandler.showString("Balance insuficiente.");
+            IOHandler.showString("Insufficient available balance.");
             return;
         }
         account.addBalance(-getAmount());
